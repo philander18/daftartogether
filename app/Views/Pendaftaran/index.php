@@ -24,8 +24,8 @@
                     <label for="gender" class="pt-2">Jenis Kelamin</label>
                 </div>
                 <div class="col-8">
-                    <select class="form-select gender" aria-label="Jenis Kelamin">
-                        <option value="Laki-laki">Laki-laki</option>
+                    <select class="form-select" id="gender" name="gender" aria-label="Jenis Kelamin">
+                        <option value="Laki-laki" selected>Laki-laki</option>
                         <option value="Perempuan">Perempuan</option>
                     </select>
                 </div>
@@ -35,7 +35,7 @@
                     <label for="gereja" class="pt-2">Gereja</label>
                 </div>
                 <div class="col-8">
-                    <select class="form-select gereja" aria-label="Gereja">
+                    <select class="form-select" id="gereja" name="gereja" aria-label="Gereja">
                         <?php foreach ($listgereja as $gereja) : ?>
                             <option value="<?= $gereja['nama']; ?>"><?= $gereja['nama']; ?></option>
                         <?php endforeach ?>
@@ -48,11 +48,18 @@
                 </div>
             </div>
         </form>
-        <h6 style="text-align: left;">Note :</h6>
-        <p align="justify">Biaya pendaftaran minimal 50K. <br>
-            Pembayaran dilakukan via transfer ke rekening BCA 8105982441 a.n. Hadasa Maretisa Susanto dan melakukan konfirmasi pembayaran ke nomor 085659133234. <br>
-            Panitia ijin memasukkan nomor HP yang telah selesai pendaftaran dan pembayaran ke grup WA Ibadah Padang Wilayah 1 supaya memudahkan koordinasi</p>
-
+        <h6 style="text-align: left;">Catatan :</h6>
+        <ol style="text-align: left; margin-left: -20px">
+            <li>
+                <p align="justify">Biaya pendaftaran minimal Rp 50.000,-/orang. Bila tergerak untuk memberi sumbangan kasih, boleh transfer lebih dari nominal tersebut.</p>
+            </li>
+            <li>
+                <p align="justify">Pembayaran dilakukan via transfer ke rekening BCA <b>8105982441 a.n. Hadasa Maretisa Susanto</b> dan melakukan konfirmasi pembayaran ke nomor <b>085659133234</b>.</p>
+            </li>
+            <li>
+                <p align="justify">Peserta yang sudah selesai melakukan pendaftaran dan pembayaran akan dimasukkan ke dalam grup Whatsapp Ibadah Padang Wilayah 1 sesuai nomor HP yang tercantum di atas, guna mendapatkan informasi dan mempermudah koordinasi.</p>
+            </li>
+        </ol>
     </div>
     <div class="detail">
         <img src="<?= base_url(); ?>public/images/together1.png" class="img-fluid">
