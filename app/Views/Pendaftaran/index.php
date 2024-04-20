@@ -64,13 +64,13 @@
     <div class="detail">
         <div class="row justify-content-center">
             <div class="col">
-                <div class="container-fluid text-start">
+                <div class="container text-start p-0">
                     <label class="text-dark d-inline">
                         Search :
                     </label>
                     <input class="form-control form-control-sm d-inline mr-3" type="search" style="background: rgba(255, 255, 255, 0.5); width:200px" id="keyword" name="keyword">
                 </div>
-                <div class="container-fluid mt-2 tabelDataPendaftaran">
+                <div class="container mt-2 tabelDataPendaftaran p-0">
                     <table id="tabelDataPendaftaran" class="table table-striped" style="width:100%">
                         <thead>
                             <tr class="table-dark">
