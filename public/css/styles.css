@@ -50,8 +50,7 @@ body, .modal-content {
 }
 .detail {
     grid-area: detail;
-    text-align: center;
-    margin: 20px;
+    margin-top: 15px;
 }
 
 div.daftar img {
@@ -67,6 +66,9 @@ div input {
         grid-template-columns: minmax(360px, 1fr) 2fr;
         grid-template-areas: 'daftar detail';
     }
+   .konten-daftar div.detail {
+    margin-left: 40px;
+   }
 }
 
 div.page ul{

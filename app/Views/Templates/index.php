@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
     <link href="<?= base_url(); ?>public/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="<?= base_url(); ?>public/css/all.min.css" rel="stylesheet" type="text/css">
     <link href="<?= base_url(); ?>public/css/styles.css" rel="stylesheet" type="text/css">
     <link rel="shortcut icon" href="<?= base_url(); ?>public/images/icon.png">
 </head>
@@ -17,8 +18,10 @@
     <?= $this->renderSection('page-content'); ?>
     <script src="<?= base_url(); ?>public/js/bootstrap.min.js"></script>
     <script src="<?= base_url(); ?>public/js/jquery-3.7.1.min.js"></script>
+    <script src="<?= base_url(); ?>public/js/all.js"></script>
     <script src="https://unpkg.com/@popperjs/core@2"></script>
     <?= $this->include('Templates/script'); ?>
+    <?= $this->include('Pendaftaran/script'); ?>
 </body>
 
 </html>

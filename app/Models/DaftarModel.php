@@ -13,4 +13,17 @@ class DaftarModel extends Model
     {
         return $this->db->table('gereja')->select('nama')->orderBy('nama', 'asc')->get()->getResultArray();
     }
+    public function searchnama($keyword, $jumlahlist, $index)
+    {
+        $where = "nama like '%" . $keyword . "%'";
+        $all = $this->db->table('peserta')->select('id, nama, hp, bayar')->where($where)->orderBy('nama', 'ASC')->get()->getResultArray();
+        $jumlahdata = count($all);
+        $lastpage = ceil($jumlahdata / $jumlahlist);
+        $tabel = array_splice($all, $index);
+        array_splice($tabel, $jumlahlist);
+        $data['lastpage'] = $lastpage;
+        $data['tabel'] = $tabel;
+        $data['jumlah'] = $jumlahdata;
+        return $data;
+    }
 }

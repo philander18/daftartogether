@@ -62,7 +62,86 @@
         </ol>
     </div>
     <div class="detail">
-        <img src="<?= base_url(); ?>public/images/together1.png" class="img-fluid">
+        <div class="row justify-content-center">
+            <div class="col">
+                <div class="container-fluid text-start">
+                    <label class="text-dark d-inline">
+                        Search :
+                    </label>
+                    <input class="form-control form-control-sm d-inline mr-3" type="search" style="background: rgba(255, 255, 255, 0.5); width:200px" id="keyword" name="keyword">
+                </div>
+                <div class="container-fluid mt-2 tabelDataPendaftaran">
+                    <table id="tabelDataPendaftaran" class="table table-striped" style="width:100%">
+                        <thead>
+                            <tr class="table-dark">
+                                <th class="text-center">Nama</th>
+                                <th class="text-center">Bayar</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <?php foreach ($peserta as $row) : ?>
+                                <tr>
+                                    <td class="text-center align-middle m-1 p-1 text-dark" style="width: 70%;">
+                                        <a href="" class="link-primary modalpanitia" data-bs-toggle="modal" data-bs-target="#formpanitia" data-id="<?= $row["id"]; ?>" name="nama" id="nama">
+                                            <?= $row["nama"]; ?>
+                                        </a>
+                                    </td>
+                                    <td class="text-center align-middle m-1 p-1" style="width: 30%;">
+                                        <?php if (is_null($row['bayar'])) : ?>
+                                            <i class="fas fa-circle-xmark" id="status"></i>
+                                        <?php else : ?>
+                                            <?= number_format($row["bayar"], 0, ',', '.'); ?>
+                                        <?php endif; ?>
+                                    </td>
+                                </tr>
+                            <?php endforeach; ?>
+                        </tbody>
+                    </table>
+                    <?php if ($peserta) : ?>
+                        <nav aria-label="Page navigation">
+                            <ul class="pagination">
+                                <?php if ($pagination['first']) : ?>
+                                    <li class="page-item">
+                                        <a class="page-link text-dark linkD" href="#" aria-label="First" id="first" name="first" data-page="1">
+                                            <span aria-hidden="false">First</span>
+                                        </a>
+                                    </li>
+                                <?php endif ?>
+                                <?php if ($pagination['previous']) : ?>
+                                    <li class="page-item">
+                                        <a class="page-link text-dark linkD" href="#" aria-label="Previous" id="previous" name="previous" data-page="<?= $page - 1; ?>">
+                                            <span aria-hidden=" true">Previous</span>
+                                        </a>
+                                    </li>
+                                <?php endif ?>
+                                <?php foreach ($pagination['number'] as $number) : ?>
+                                    <li class="page-item <?= $pagination['page'] == $number ? 'active' : '' ?>">
+                                        <a class="page-link text-dark linkD" href="#" id="nomor<?= $number; ?>" name="nomor<?= $number; ?>" data-page="<?= $number; ?>">
+                                            <span aria-hidden="true"><?= $number; ?></span>
+                                        </a>
+                                    </li>
+                                <?php endforeach ?>
+                                <?php if ($pagination['next']) : ?>
+                                    <li class="page-item">
+                                        <a class="page-link text-dark linkD" href="#" aria-label="Next" id="next" name="next" data-page="<?= $page + 1; ?>">
+                                            <span aria-hidden=" true">Next</span>
+                                        </a>
+                                    </li>
+                                <?php endif ?>
+                                <?php if ($pagination['last']) : ?>
+                                    <li class="page-item">
+                                        <a class="page-link text-dark linkD" href="#" aria-label="<?= $last; ?>" id="last" name="last" data-page="<?= $last; ?>">
+                                            <span aria-hidden="true"><?= $last; ?></span>
+                                        </a>
+                                    </li>
+                                <?php endif ?>
+                            </ul>
+                        </nav>
+                    <?php endif; ?>
+                    <h5 class="text-black text-start" style="text-shadow: 2px 2px white;">Jumlah Data : <?= $jumlah; ?></h5>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 <?= $this->endSection(); ?>
