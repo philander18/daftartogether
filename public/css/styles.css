@@ -51,6 +51,7 @@ body, .modal-content {
     border-radius: 8px;
     box-shadow: 6px 6px 4px rgb(41, 7, 233);
     padding: 8px;
+    box-sizing: border-box;
 }
 .detail {
     grid-area: detail;
@@ -59,6 +60,7 @@ body, .modal-content {
     border-radius: 8px;
     box-shadow: 6px 6px 4px rgb(41, 7, 233);
     padding: 8px;
+    box-sizing: border-box;
 }
 
 div.daftar img {
