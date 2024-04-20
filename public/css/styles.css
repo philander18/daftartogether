@@ -39,14 +39,14 @@ body, .modal-content {
 }
 .konten-daftar {
     display: grid;
-    grid-template-columns: minmax(380px, 1fr);
+    grid-template-columns: minmax(360px, 1fr);
     grid-template-areas: 'daftar'
         'detail';
 }
 .daftar {
     grid-area: daftar;
     text-align: center;
-    margin: 20px;
+    margin-top: 20px;
 }
 .detail {
     grid-area: detail;
@@ -64,7 +64,7 @@ div input {
 
 @media screen and (min-width:922px) {
     .konten-daftar {
-        grid-template-columns: minmax(380px, 1fr) 2fr;
+        grid-template-columns: minmax(360px, 1fr) 2fr;
         grid-template-areas: 'daftar detail';
     }
 }
