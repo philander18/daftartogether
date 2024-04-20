@@ -13,13 +13,13 @@
                     </div>
                 <?php endif; ?>
             </div>
-            <div class="my-3">
+            <div class="my-2">
                 <input class="form-control" type="text" id="nama" name="nama" placeholder="Nama" required>
             </div>
-            <div class="mb-3">
+            <div class="mb-2">
                 <input class="form-control" type="text" id="hp" name="hp" placeholder="Nomor HP" required>
             </div>
-            <div class="row mb-3">
+            <div class="row mb-2">
                 <div class="col-4">
                     <label for="gender" class="pt-2">Jenis Kelamin</label>
                 </div>
@@ -30,7 +30,7 @@
                     </select>
                 </div>
             </div>
-            <div class="row mb-3">
+            <div class="row mb-2">
                 <div class="col-4">
                     <label for="gereja" class="pt-2">Gereja</label>
                 </div>
@@ -42,7 +42,7 @@
                     </select>
                 </div>
             </div>
-            <div class="row mb-4">
+            <div class="row mb-3">
                 <div class="col-4">
                     <button type="submit" class="btn btn-primary text-dark fw-bold" style="width: 100%">Submit</button>
                 </div>
@@ -51,13 +51,13 @@
         <h6 style="text-align: left;">Catatan :</h6>
         <ol style="text-align: left; margin-left: -20px">
             <li>
-                <p align="justify">Biaya pendaftaran minimal Rp 50.000,-/orang. Bila tergerak untuk memberi sumbangan kasih, boleh transfer lebih dari nominal tersebut.</p>
+                <p align="justify" class="mb-0">Biaya pendaftaran minimal Rp 50.000,-/orang. Bila tergerak untuk memberi sumbangan kasih, boleh transfer lebih dari nominal tersebut.</p>
             </li>
             <li>
-                <p align="justify">Pembayaran dilakukan via transfer ke rekening BCA <b>8105982441 a.n. Hadasa Maretisa Susanto</b> dan melakukan konfirmasi pembayaran ke nomor <b>085659133234</b>.</p>
+                <p align="justify" class="mb-0">Pembayaran dilakukan via transfer ke rekening BCA <b>8105982441 a.n. Hadasa Maretisa Susanto</b> dan melakukan konfirmasi pembayaran ke nomor <b>085659133234</b>.</p>
             </li>
             <li>
-                <p align="justify">Peserta yang sudah selesai melakukan pendaftaran dan pembayaran akan dimasukkan ke dalam grup Whatsapp Ibadah Padang Wilayah 1 sesuai nomor HP yang tercantum di atas, guna mendapatkan informasi dan mempermudah koordinasi.</p>
+                <p align="justify" class="mb-0">Peserta yang sudah selesai melakukan pendaftaran dan pembayaran akan dimasukkan ke dalam grup Whatsapp Ibadah Padang Wilayah 1 sesuai nomor HP yang tercantum di atas, guna mendapatkan informasi dan mempermudah koordinasi.</p>
             </li>
         </ol>
     </div>
