@@ -47,10 +47,18 @@ body, .modal-content {
     grid-area: daftar;
     text-align: center;
     margin-top: 15px;
+    border: 2px black solid;
+    border-radius: 8px;
+    box-shadow: 6px 6px 4px rgb(41, 7, 233);
+    padding: 8px;
 }
 .detail {
     grid-area: detail;
     margin-top: 15px;
+    border: 2px black solid;
+    border-radius: 8px;
+    box-shadow: 6px 6px 4px rgb(41, 7, 233);
+    padding: 8px;
 }
 
 div.daftar img {
