@@ -29,37 +29,37 @@
         <ul class="pagination">
             <?php if ($pagination['first']) : ?>
                 <li class="page-item">
-                    <a class="page-link text-dark linkD" href="#" aria-label="First" id="first" name="first" data-page="1">
+                    <button class="page-link text-dark linkD" aria-label="First" id="first" name="first" data-page="1">
                         <span aria-hidden="false">First</span>
-                    </a>
+                    </button>
                 </li>
             <?php endif ?>
             <?php if ($pagination['previous']) : ?>
                 <li class="page-item">
-                    <a class="page-link text-dark linkD" href="#" aria-label="Previous" id="previous" name="previous" data-page="<?= $page - 1; ?>">
+                    <button class="page-link text-dark linkD" aria-label="Previous" id="previous" name="previous" data-page="<?= $page - 1; ?>">
                         <span aria-hidden=" true">Previous</span>
-                    </a>
+                    </button>
                 </li>
             <?php endif ?>
             <?php foreach ($pagination['number'] as $number) : ?>
                 <li class="page-item <?= $pagination['page'] == $number ? 'active' : '' ?>">
-                    <a class="page-link text-dark linkD" href="#" id="nomor<?= $number; ?>" name="nomor<?= $number; ?>" data-page="<?= $number; ?>">
+                    <button class="page-link text-dark linkD" id="nomor<?= $number; ?>" name="nomor<?= $number; ?>" data-page="<?= $number; ?>">
                         <span aria-hidden="true"><?= $number; ?></span>
-                    </a>
+                    </button>
                 </li>
             <?php endforeach ?>
             <?php if ($pagination['next']) : ?>
                 <li class="page-item">
-                    <a class="page-link text-dark linkD" href="#" aria-label="Next" id="next" name="next" data-page="<?= $page + 1; ?>">
+                    <button class="page-link text-dark linkD" aria-label="Next" id="next" name="next" data-page="<?= $page + 1; ?>">
                         <span aria-hidden=" true">Next</span>
-                    </a>
+                    </button>
                 </li>
             <?php endif ?>
             <?php if ($pagination['last']) : ?>
                 <li class="page-item">
-                    <a class="page-link text-dark linkD" href="#" aria-label="<?= $last; ?>" id="last" name="last" data-page="<?= $last; ?>">
+                    <button class="page-link text-dark linkD" aria-label="<?= $last; ?>" id="last" name="last" data-page="<?= $last; ?>">
                         <span aria-hidden="true"><?= $last; ?></span>
-                    </a>
+                    </button>
                 </li>
             <?php endif ?>
         </ul>
