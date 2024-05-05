@@ -46,6 +46,35 @@ class Home extends BaseController
         return view('Pendaftaran/index', $data);
     }
 
+    public function getdata()
+    {
+        echo json_encode($this->DaftarModel->getDatabyid($_POST['id'])[0]);
+    }
+
+    public function searchDataPeserta()
+    {
+        $page = $_POST['page'];
+        $keyword = $_POST['keyword'];
+        if ($page == 1) {
+            $index = 0;
+        } else {
+            $index = ($page - 1) * $this->jumlahlist;
+        }
+        $peserta = $this->DaftarModel->searchnama($keyword, $this->jumlahlist, $index)['tabel'];
+        $last = $this->DaftarModel->searchnama($keyword, $this->jumlahlist, $index)['lastpage'];
+        $jumlah = $this->DaftarModel->searchnama($keyword, $this->jumlahlist, $index)['jumlah'];
+        $pagination = $this->pagination($page, $last);
+        $data = [
+            'peserta' => $peserta,
+            'pagination' => $pagination,
+            'last' => $last,
+            'jumlah' => $jumlah,
+            'page' => $page,
+            // 'summary' => $summary,
+        ];
+        echo view('Pendaftaran/Tabel/peserta', $data);
+    }
+
     public function pagination($page, $lastpage)
     {
         $pagination = [

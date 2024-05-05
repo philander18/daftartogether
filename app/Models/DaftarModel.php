@@ -16,7 +16,7 @@ class DaftarModel extends Model
     public function searchnama($keyword, $jumlahlist, $index)
     {
         $where = "nama like '%" . $keyword . "%'";
-        $all = $this->db->table('peserta')->select('id, nama, hp, bayar')->where($where)->orderBy('nama', 'ASC')->get()->getResultArray();
+        $all = $this->db->table('peserta')->select('id, nama, hp, pic, bayar')->where($where)->orderBy('nama', 'ASC')->get()->getResultArray();
         $jumlahdata = count($all);
         $lastpage = ceil($jumlahdata / $jumlahlist);
         $tabel = array_splice($all, $index);
@@ -25,5 +25,11 @@ class DaftarModel extends Model
         $data['tabel'] = $tabel;
         $data['jumlah'] = $jumlahdata;
         return $data;
+    }
+
+    function getDatabyid($id)
+    {
+        $query = $this->db->table('peserta')->where('id', $id)->get();
+        return $query->getResult();
     }
 }
