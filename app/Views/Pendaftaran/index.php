@@ -54,7 +54,7 @@
                 <p align="justify" class="mb-0">Biaya pendaftaran minimal Rp 50.000,-/orang. Bila tergerak untuk memberi sumbangan kasih, boleh transfer lebih dari nominal tersebut.</p>
             </li>
             <li>
-                <p align="justify" class="mb-0">Pembayaran dilakukan via transfer ke rekening BCA <b>8105982441 a.n. Hadasa Maretisa Susanto</b> dan melakukan konfirmasi pembayaran ke nomor <b>085659133234</b>. (Gopay /Shopeepay bisa ke nomor tersebut)</p>
+                <p align="justify" class="mb-0">Pembayaran dilakukan via transfer ke rekening BCA <b>8105982441 a.n. Hadasa Maretisa Susanto</b> dan melakukan konfirmasi pembayaran ke nomor <b>085659133234</b>.<br>(Gopay/Shopeepay bisa ke nomor tersebut)</p>
             </li>
             <li>
                 <p align="justify" class="mb-0">Peserta yang sudah selesai melakukan pendaftaran dan pembayaran akan dimasukkan ke dalam grup Whatsapp Ibadah Padang Wilayah 1 sesuai nomor HP yang tercantum di atas, guna mendapatkan informasi dan mempermudah koordinasi.</p>
