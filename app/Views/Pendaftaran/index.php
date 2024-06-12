@@ -1,7 +1,7 @@
 <?= $this->extend('Templates/index'); ?>
 <?= $this->section('page-content'); ?>
 <div class="container konten-daftar">
-    <div class="daftar">
+    <div class="daftar" hidden>
         <form autocomplete="off" action="" method="POST">
             <img src="<?= base_url(); ?>public/images/together1.png" class="img-fluid">
             <h3>Pendaftaran Ibadah Padang</h3>

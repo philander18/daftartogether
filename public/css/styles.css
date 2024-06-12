@@ -73,8 +73,8 @@ div input {
 
 @media screen and (min-width:922px) {
     .konten-daftar {
-        grid-template-columns: minmax(360px, 1fr) 2fr;
-        grid-template-areas: 'daftar detail';
+        grid-template-columns: minmax(360px, 1fr);
+        grid-template-areas: 'detail';
     }
    .konten-daftar div.detail {
     margin-left: 40px;
